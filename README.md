@@ -1,0 +1,1 @@
+- TODO: script to rename files and lines to change project name
