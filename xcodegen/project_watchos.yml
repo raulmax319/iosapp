@@ -1,0 +1,26 @@
+targets:
+  Template_watchOS_App:
+    type: application
+    platform: watchOS
+
+    sources:
+      - "Sources/Template_watchOS_App"
+
+    configFiles:
+      development:
+        [
+          config/xcconfig/development.xcconfig,
+          Target Support Files/Pods-Template_watchOS_App/Pods-Template_watchOS_App.development.xcconfig,
+        ]
+      production:
+        [
+          config/xcconfig/release.xcconfig,
+          Target Support Files/Pods-Template_watchOS_App/Pods-Template_watchOS_App.release.xcconfig,
+        ]
+
+    scheme:
+      configVariants: Template_watchOS_App
+
+    settings:
+      INFOPLIST_FILE: Sources/Template_watchOS_App/Supporting Files/Info.plist
+      PRODUCT_BUNDLE_IDENTIFIER: $(WKAPP_BUNDLE_IDENTIFIER).watchkitapp

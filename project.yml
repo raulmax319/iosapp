@@ -1,0 +1,28 @@
+name: Template
+
+options:
+  minimumXcodeGenVersion: 2.29
+  groupSortPosition: top
+  generateEmptyDirectories: true
+  deploymentTarget:
+    iOS: 14.0
+    watchOS: 8.0
+  postGenCommand: pod install
+configFiles:
+  development: config/xcconfig/development.xcconfig
+  production: config/xcconfig/release.xcconfig
+
+fileGroups:
+  - config
+
+configs:
+  development: debug
+  production: release
+
+settings:
+
+include:
+  - path: xcodegen/project_ios.yml
+    relativePaths: false
+  - path: xcodegen/project_watchos.yml
+    relativePaths: false

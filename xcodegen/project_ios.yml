@@ -1,0 +1,27 @@
+targets:
+  Template:
+    type: application
+    platform: iOS
+
+    sources:
+      - Sources/Template
+
+    configFiles:
+      development:
+        [
+          config/xcconfig/development.xcconfig,
+          Target Support Files/Pods-Template/Pods-Template.development.xcconfig,
+        ]
+      production:
+        [
+          config/xcconfig/release.xcconfig,
+          Target Support Files/Pods-Template/Pods-Template.release.xcconfig,
+        ]
+
+    dependencies:
+      - target: "Template_watchOS_App"
+
+    settings:
+      INFOPLIST_FILE: Sources/Template/Supporting Files/Info.plist
+      CLANG_CXX_LANGUAGE_STANDARD: "gnu++17"
+      PRODUCT_BUNDLE_IDENTIFIER: $(PRODUCT_BUNDLE_IDENTIFIER)
