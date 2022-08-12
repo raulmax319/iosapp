@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Template_Watch_App: App {
+struct TemplateWatchApp: App {
   var body: some Scene {
     WindowGroup {
       BaseContentView()

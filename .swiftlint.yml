@@ -1,0 +1,7 @@
+force_cast: warning
+
+type_name:
+  min_length: 4
+  max_length: # warning and error
+    warning: 30
+    error: 40
