@@ -1,5 +1,15 @@
 force_cast: warning
 
+excluded:
+  - Carthage
+  - Pods
+
+line_length: 90
+
+line_length:
+  warning: 100
+  error: 120
+
 type_name:
   min_length: 4
   max_length: # warning and error
