@@ -7,7 +7,7 @@ options:
   deploymentTarget:
     iOS: 14.0
     watchOS: 8.0
-  postGenCommand: pod install
+  postGenCommand: sh scripts/post_gen.sh
 configFiles:
   development: config/xcconfig/development.xcconfig
   production: config/xcconfig/release.xcconfig
