@@ -7,16 +7,8 @@ targets:
       - Sources/Template
 
     configFiles:
-      development:
-        [
-          config/xcconfig/development.xcconfig,
-          Target Support Files/Pods-Template/Pods-Template.development.xcconfig,
-        ]
-      production:
-        [
-          config/xcconfig/release.xcconfig,
-          Target Support Files/Pods-Template/Pods-Template.release.xcconfig,
-        ]
+      development: [config/xcconfig/development.xcconfig, $(inherited)]
+      production: [config/xcconfig/release.xcconfig, $(inherited)]
 
     dependencies:
       - target: "Template_watchOS_App"
@@ -37,3 +29,4 @@ targets:
             echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
           fi
         showEnvVars: true
+        basedOnDependencyAnalysis: false

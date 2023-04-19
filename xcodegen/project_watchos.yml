@@ -7,16 +7,8 @@ targets:
       - "Sources/Template_watchOS_App"
 
     configFiles:
-      development:
-        [
-          config/xcconfig/development.xcconfig,
-          Target Support Files/Pods-Template_watchOS_App/Pods-Template_watchOS_App.development.xcconfig,
-        ]
-      production:
-        [
-          config/xcconfig/release.xcconfig,
-          Target Support Files/Pods-Template_watchOS_App/Pods-Template_watchOS_App.release.xcconfig,
-        ]
+      development: [config/xcconfig/development.xcconfig, $(inherited)]
+      production: [config/xcconfig/release.xcconfig, $(inherited)]
 
     scheme:
       configVariants: Template_watchOS_App
